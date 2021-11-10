@@ -23,6 +23,9 @@ class PreviewActivity : AppCompatActivity() {
                 ", Include Junior: $includeJunior, Job Title: $jobTitle, Immediate Start: $immediateStart, Start Date: $startDate"
 
         text_view_message.text = testString
+
+
+        
     }
 
 }
