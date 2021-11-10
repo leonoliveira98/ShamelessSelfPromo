@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
             edit_text_start_date.text.toString()
         )
 
-
         // *** To go to another activity!!! ***
         val previewActivityIntent = Intent(this, PreviewActivity::class.java)
         previewActivityIntent.putExtra("Message", message)
