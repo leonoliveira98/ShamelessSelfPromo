@@ -25,7 +25,7 @@ class PreviewActivity : AppCompatActivity() {
         text_view_message.text = testString
 
 
-        
+
     }
 
 }

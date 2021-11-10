@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,7 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         button_preview.setOnClickListener {
             onPreviewClicked()
+
         }
+
+        val spinnerValues: Array<String> = arrayOf("Android Developer","Android Engineer")
+
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerValues)
+        spinner_job_title.adapter = spinnerAdapter
+
 
     }
 
