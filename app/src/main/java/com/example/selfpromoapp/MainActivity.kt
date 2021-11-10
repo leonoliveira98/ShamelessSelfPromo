@@ -1,5 +1,6 @@
 package com.example.selfpromoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         button_preview.setOnClickListener {
             onPreviewClicked()
         }
+
     }
 
     private fun onPreviewClicked() {
@@ -35,11 +37,13 @@ class MainActivity : AppCompatActivity() {
         val startDate = edit_text_start_date.text.toString()
 
         // Kotlin string templates
-        val testString = "Contact Name: $contactName, Contact Number: $contactNumber, " +
-                "Display Name: $myDisplayName, Include Junior: $includeJunior, Job Title: $jobTitle, " +
-                "Immediate Start: $immediateStart, Start Date: $startDate"
+//        val testString = "Contact Name: $contactName, Contact Number: $contactNumber, " +
+//                "Display Name: $myDisplayName, Include Junior: $includeJunior, Job Title: $jobTitle, " +
+//                "Immediate Start: $immediateStart, Start Date: $startDate"
 
-        Toast.makeText(this, testString, Toast.LENGTH_LONG).show()
+        // *** To go to other activity!!! ***
+        val previewActivityIntent = Intent(this, PreviewActivity::class.java)
+        startActivity(previewActivityIntent)
     }
 
 
