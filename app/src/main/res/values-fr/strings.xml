@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Shameless Self Promo App</string>
-    <string name="hint_contact_name">Contact Name</string>
+    <string name="app_name" translatable="false">Auto-promotion sans vergogne</string>
+    <string name="hint_contact_name">Nom du contact</string>
     <string name="hint_contact_number">Contact Number</string>
     <string name="hint_display_name">My Display Name</string>
     <string name="text_include_junior">Include Junior</string>
