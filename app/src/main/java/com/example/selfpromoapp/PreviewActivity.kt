@@ -1,5 +1,7 @@
 package com.example.selfpromoapp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_preview.*
@@ -54,9 +56,15 @@ class PreviewActivity : AppCompatActivity() {
     private fun setupButton() {
 
         button_send_message.setOnClickListener {
+
             // Send Message Intent
+            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("smsto: ${message.contactNumber}")  // This ensures only SMS apps respond
+                putExtra("sms_body", messagePreviewText)
+            }
+            startActivity(intent)
         }
-
-
     }
+
+
 }
